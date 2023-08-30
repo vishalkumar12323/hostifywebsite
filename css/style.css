@@ -1,0 +1,576 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --background-color: #020230;
+    --primaryBgColor: #ff4646;
+    --primry-color: white;
+    --secondry-color: black;
+    --secondryBgColor: #03a7d3;
+    --primaryBoxShadow: 0 9px 9px 1px rgba(0, 0, 0, 0.1);
+    --grayColor: rgb(161, 157, 157);
+
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+html {
+    font-size: 60.53%;
+    font-weight: 550;
+    color: var(--primry-color);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    overflow-x: hidden;
+}
+
+h1 {
+    font-size: 3.7rem;
+    font-weight: 600;
+    color: var(--primry-color);
+    text-transform: uppercase;
+}
+
+h2 {
+    font-size: 1.7rem;
+    font-weight: 550;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: var(--primry-color);
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+span {
+    /* color: var(--primry-color); */
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.section {
+    margin: 1.5rem 1rem;
+    padding: 5rem 10rem;
+    margin: 0rem 0rem;
+}
+
+.grid {
+    display: grid;
+}
+
+.grid-two-column {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.grid-three-column {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.grid-four-column {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+}
+
+/* Our Heaer Section Css ************************************ => */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--background-color);
+    width: 100%;
+    padding: 6rem 2rem;
+    height: 8rem;
+}
+
+header .logo {
+    margin-right: 1.8rem;
+    cursor: pointer;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navbar .list-items {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.navbar .list-items li a {
+    padding-right: 5rem;
+    font-size: 2rem;
+    cursor: pointer;
+    transition: all 0.2s linear;
+}
+
+.navbar .list-items li a:hover {
+    color: var(--primaryBgColor);
+}
+
+
+header .mobile-nav-bar {
+    border: 1px solid var(--primry-color);
+    padding: 0.6rem 0.8rem;
+    position: absolute;
+    top: 2.5rem;
+    right: 3rem;
+    cursor: pointer;
+    display: none;
+}
+
+header .mobile-nav-bar .open-nav-icon {
+    font-size: 3rem;
+    /* display: none; */
+}
+
+header .mobile-nav-bar .close-nav-icon {
+    font-size: 3rem;
+    display: none;
+}
+
+
+/* Our Hero Section Css ************************************ => */
+.hero-section {
+    background-color: var(--background-color);
+    width: 100%;
+}
+
+/* Hero Section left-side-data Css ***** => */
+.hero-section .left-side-data {
+    width: 50rem;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+}
+
+.hero-section .left-side-data h2 {
+    font-size: 3.5rem;
+    max-width: 29rem;
+    font-weight: 700;
+    margin-bottom: 2.5rem;
+    line-height: 4rem;
+}
+
+.hero-section .left-side-data .para {
+    width: 100%;
+    margin-bottom: 2.5rem;
+}
+
+.hero-section .left-side-data .para p {
+    font-size: 1.5rem;
+}
+
+.hero-button {
+    width: 60rem;
+    height: 10rem;
+}
+
+.hero-button .btn1 {
+    padding: 1.8rem 7rem;
+    background-color: var(--secondryBgColor);
+    color: var(--primry-color);
+    font-weight: 550;
+    font-size: 1.4rem;
+    margin-right: 2rem;
+    border: none;
+    transition: all 0.3s linear;
+}
+
+.hero-button .btn1:hover {
+    background-color: transparent;
+    border: 1px solid var(--secondryBgColor);
+    color: var(--btn-color1);
+    cursor: pointer;
+}
+
+.hero-button .btn2 {
+    padding: 1.8rem 7rem;
+    background-color: var(--primaryBgColor);
+    color: var(--primry-color);
+    font-weight: 550;
+    font-size: 1.4rem;
+    border: none;
+    margin-left: 1rem;
+    transition: all 0.3s linear;
+}
+
+.hero-button .btn2:hover {
+    background-color: transparent;
+    border: 1px solid var(--primaryBgColor);
+    color: var(--primaryBgColor);
+    cursor: pointer;
+}
+
+/* Hero Section right-side-data Css ***** => */
+.hero-section .right-side-data {
+    width: 50rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-section .right-side-data img {
+    width: 100%;
+}
+
+/* Services Section Css ************************************* => */
+.services-section {
+    background-color: var(--primry-color);
+    color: var(--secondry-color);
+}
+
+.section-heading {
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 750;
+}
+
+.services-section .container .container-box {
+    padding: 3rem;
+    margin-top: 2rem;
+    box-shadow: var(--primaryBoxShadow);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0, 1);
+}
+
+.services-section .container .container-box:hover {
+    transform: scale(1.05, 1.05);
+}
+
+.services-section .container .container-box .img {
+    width: 8rem;
+    height: 8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: var(--secondryBgColor);
+    position: relative;
+    top: -1rem;
+    transition: all 0.2s linear;
+}
+
+.services-section .container .container-box:hover>.img {
+    background-color: var(--primaryBgColor);
+}
+
+.services-section .container .container-box .img img {
+    width: 5rem;
+    background-size: cover;
+}
+
+.services-section .container .container-box .img:visited {
+    background-color: var(--primaryBgColor);
+}
+
+.services-section .container .container-box h3 {
+    font-size: 2.3rem;
+    font-weight: 600;
+    word-spacing: -3px;
+}
+
+.services-section .container .container-box .paragraph p {
+    text-align: center;
+    font-size: 1.4rem;
+}
+
+.services-section a {
+    color: var(--secondry-color);
+    margin-top: 2rem;
+    text-transform: capitalize;
+    font-size: 1.9rem;
+    transition: all 0.2s linear;
+    word-spacing: -2px;
+}
+
+.services-section a:hover {
+    color: var(--primaryBgColor);
+    text-decoration: underline;
+}
+
+/* Price Section Css ********************************* => */
+.price-section {
+    padding: 5rem 0;
+    color: var(--secondry-color);
+}
+
+.price-section-container {
+    width: 100%;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.price-section .heading-container h2 {
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 600;
+}
+
+.price-section .price-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.price-section .price-container .box {
+    margin: 3rem 1rem 0 1rem;
+}
+
+.price-section .price-container .box .detail-box {
+    width: 25rem;
+    padding: 3rem 1rem 1rem 1rem;
+    box-shadow: var(--primaryBoxShadow);
+    transition: all 0.3s linear;
+}
+
+.price-section .price-container .box .detail-box:hover {
+    background-color: var(--secondryBgColor);
+    color: var(--primry-color);
+    transform: scale(1.05, 1.05);
+}
+
+.price-section .price-container .box .detail-box span {
+    position: relative;
+    top: 4rem;
+    left: 7rem;
+    font-size: 1.4rem;
+}
+
+.price-section .price-container .box .detail-box h2 {
+    text-align: center;
+    font-size: 4rem;
+}
+
+.price-section .price-container .box .detail-box h6 {
+    text-align: center;
+    font-size: 2rem;
+}
+
+.price-section .price-container .box .detail-box .price-feature {
+    font-size: 1.4rem;
+    text-align: center;
+}
+
+.price-section .price-container .box .detail-box .price-feature li {
+    margin-bottom: 1.5rem;
+}
+
+.price-section .price-container .box .btn-box {
+    width: 25rem;
+    text-align: center;
+    margin-top: 4rem;
+}
+
+.price-section .price-container .box .btn-box a {
+    padding: 1.6rem 6rem;
+    background-color: var(--primaryBgColor);
+    border: none;
+    color: var(--primry-color);
+    transition: all 0.3s linear;
+}
+
+.price-section .price-container .box .btn-box a:hover {
+    color: var(--primaryBgColor);
+    background-color: transparent;
+    cursor: pointer;
+    border: 1px solid var(--primaryBgColor);
+}
+
+/* About-Us Section Css ****************************** => */
+/* .left-side-item  */
+.about-us-section {
+    background-color: var(--primry-color);
+    color: var(--secondry-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.items .section-heading {
+    text-align: start;
+}
+
+.items .paragraph {
+    width: 58rem;
+    margin: 2.5rem 0;
+}
+
+.items .paragraph p {
+    font-size: 1.5rem;
+    color: var(--grayColor);
+}
+
+.items .hero-button .btn2 {
+    margin-left: 0;
+}
+
+/* right-side-item  */
+.about-us-section .img {
+    width: 50rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.about-us-section .img img {
+    width: 100%;
+}
+
+
+/* Contact Section Start ********************************* => */
+.contact-section {
+    background-color: var(--primry-color);
+    color: var(--secondry-color);
+}
+
+.contact-section .container .form-container form div {
+    margin-top: 1rem;
+}
+
+.contact-section .container .form-container form input {
+    padding: 1.5rem 2.5rem;
+    width: 70%;
+    font-size: 1.5rem;
+    font-weight: 600;
+    outline: none;
+    border: 1px solid var(--grayColor);
+}
+
+.contact-section .container .form-container form #message {
+    height: 14rem;
+}
+
+.contact-section .container .form-container form div button {
+    padding: 1.8rem 6rem;
+    margin-top: 1rem;
+    background-color: var(--primaryBgColor);
+    color: var(--primry-color);
+    transition: all 0.3s linear;
+    border: none;
+}
+
+.contact-section .container .form-container form div button:hover {
+    border: 1px solid var(--primaryBgColor);
+    background-color: var(--primry-color);
+    color: var(--primaryBgColor);
+    cursor: pointer;
+}
+
+/* Footer Section Css *************************************** => */
+.footer-section {
+    background-color: var(--background-color);
+    color: var(--primry-color);
+}
+
+.footer-section .container .grid {
+    display: grid;
+    place-items: center;
+}
+
+.footer-section .container .row {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+}
+
+.footer-section .container .row .row-box {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-section .container .row .row-box .contact-link {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.row-box .contact-link a:hover {
+    color: var(--primaryBgColor);
+}
+
+.footer-section .container .row .row-box .address {
+    font-size: 2rem;
+    margin: 2rem 0;
+}
+
+.row .row-box .footer-link {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    color: var(--grayColor);
+}
+
+.row .row-box .footer-link a:hover {
+    color: var(--primaryBgColor);
+}
+
+.row .row-box .info-detail {
+    width: 19rem;
+    font-size: 1.4rem;
+    color: var(--grayColor);
+}
+
+.row .row-box form {
+    display: flex;
+    flex-direction: column;
+}
+
+.row .row-box form input {
+    outline: none;
+    border: none;
+    border-bottom: 1px solid var(--primry-color);
+    background-color: transparent;
+    margin-bottom: 1rem;
+    padding: 1.5rem 1rem;
+    font-size: 1.4rem;
+    color: var(--primry-color);
+}
+
+.row .row-box form .btn {
+    padding: 1.6rem 6rem;
+    background-color: var(--primaryBgColor);
+    color: var(--primry-color);
+    cursor: pointer;
+    transition: all 0.3s linear;
+    border: none;
+    outline: none;
+}
+
+.row .row-box form .btn:hover {
+    background-color: transparent;
+    color: var(--primaryBgColor);
+    border: 1px solid var(--primaryBgColor);
+}
+
+.footer-container {
+    border-top: 2px solid var(--grayColor);
+    margin-top: 4rem;
+}
+
+.footer-container p {
+    padding: 2rem 0;
+    text-align: center;
+    font-size: 1.6rem;
+    color: var(--grayColor);
+}
